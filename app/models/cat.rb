@@ -12,4 +12,7 @@ class Cat < ApplicationRecord
       prefix: true
     }
   }
+
+  scope :breed, -> (breed_parameter) { where("breed like ?", "%#{breed_parameter}%")}
+  
 end
