@@ -8,12 +8,30 @@ This API is designed to be used by an animal shelter.  It allows the user to do 
 
 ## Specs
 
+| SPECS           | URL EXAMPLE               | PARAMS                                                                     |
+|-----------------|---------------------------|----------------------------------------------------------------------------|
+| GET requests    |                           |                                                                            |
+| get all cats    | /cats                     |                                                                            |
+| get all dogs    | /dogs                     |                                                                            |
+| get one cat     | /cats/11                  | cat id                                                                     |
+| get one dog     | /dogs/7                   | dog id                                                                     |
+| get random cat  | /cats/random              |                                                                            |
+| get random dog  | /dogs/random              |                                                                            |
+| search cats     | /cats/search?query=smudge | cat name                                                                   |
+| search dogs     | /dogs/search?query=lilly  | dog name                                                                   |
+| POST requests   |                           |                                                                            |
+| post a cat      | /cats                     | name (string), age(integer), is_available(boolean set to true by default)  |
+| post a dog      | /dogs                     | name (string), age(integer), is_available(boolean set to true by default)  |
+| PATCH requests  |                           |                                                                            |
+| update a cat    | /cats/11                  | name (string), age(integer), is_available(boolean set to true by default)  |
+| update a dog    | /dogs/7                   | name (string), age(integer), is_available(boolean set to true by default)  |
+| DELETE requests |                           |                                                                            |
+| delete a cat    | /cats/11                  | cat id                                                                     |
+| delete a dog    | /dogs/7                   | dog id                                                                     |
 
-http://localhost:3000/cats/search?query=Smudge
+
 
 ## User Stories
-
-<!-- As a user I would like to see a list of all animals at the shelter -->
 
 As a user I would like to see a list of all cats at the shelter
 
