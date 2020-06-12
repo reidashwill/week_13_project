@@ -11,3 +11,12 @@ describe 'get all dogs route' do
     expect(response).to have_http_status(:success)
   end
 end
+
+describe 'get random dog route' do
+  before{get '/dogs/random'}
+  first = Dog.first.id
+  last = first + Dog.count
+  it 'returns a random dog' do
+    expect(JSON.parse(response.body)['id']).to be_between(first, last)
+  end
+end

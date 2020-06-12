@@ -33,6 +33,14 @@ class DogsController < ApplicationController
     end
   end
 
+  def random
+    first = Dog.first.id
+    last = first + Dog.count
+    dog_id = rand(first...last)
+    @dog = Dog.find(dog_id)
+    json_response(@dog)
+  end
+
   private
 
   def dog_params
