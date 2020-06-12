@@ -18,3 +18,17 @@ describe 'get random cat route' do
     expect(JSON.parse(response.body)['id']).to be_between(182, 196)
   end
 end
+
+describe 'cat search route' do
+  before {get '/cats/search?query=smudge'}
+  it 'returns cats with the name poppy' do
+    expect(response).to have_http_status(:success)
+  end
+end
+
+describe 'cat breed search route' do
+  before {get '/cats/breed?query=Khao'}
+  it 'returns cats that are the breed Khao' do
+    expect(response).to have_http_status(:success)
+  end
+end
