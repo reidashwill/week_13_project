@@ -11,3 +11,12 @@ describe 'get all cats route' do
     expect(response).to have_http_status(:success)
   end
 end
+
+describe 'get random cat route' do
+  before{get '/cats/random'}
+  first = Cat.first.id
+  last = first + Cat.count
+  it 'returns a random cat' do
+    expect(JSON.parse(response.body)['id']).to be_between(first, last)
+  end
+end
