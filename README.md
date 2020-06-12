@@ -8,26 +8,28 @@ This API is designed to be used by an animal shelter.  It allows the user to do 
 
 ## Specs
 
-| SPECS           | URL EXAMPLE               | PARAMS                                                                      |
-|-----------------|---------------------------|-----------------------------------------------------------------------------|
-| GET requests    |                           |                                                                             |
-| get all cats    | /cats                     |                                                                             |
-| get all dogs    | /dogs                     |                                                                             |
-| get one cat     | /cats/11                  | cat id                                                                      |
-| get one dog     | /dogs/7                   | dog id                                                                      |
-| get random cat  | /cats/random              |                                                                             |
-| get random dog  | /dogs/random              |                                                                             |
-| search cats     | /cats/search?query=smudge | cat name                                                                    |
-| search dogs     | /dogs/search?query=lilly  | dog name                                                                    |
-| POST requests   |                           |                                                                             |
-| post a cat      | /cats                     | name (string), age (integer), is_available (boolean set to true by default) |
-| post a dog      | /dogs                     | name (string), age (integer), is_available (boolean set to true by default) |
-| PATCH requests  |                           |                                                                             |
-| update a cat    | /cats/11                  | name (string), age (integer), is_available (boolean set to true by default) |
-| update a dog    | /dogs/7                   | name (string), age (integer), is_available (boolean set to true by default) |
-| DELETE requests |                           |                                                                             |
-| delete a cat    | /cats/11                  | cat id                                                                      |
-| delete a dog    | /dogs/7                   | dog id                                                                      |
+| SPECS                | URL EXAMPLE               | PARAMS                                                                      |
+|----------------------|---------------------------|-----------------------------------------------------------------------------|
+| GET requests         |                           |                                                                             |
+| get all cats         | /cats                     |                                                                             |
+| get all dogs         | /dogs                     |                                                                             |
+| get one cat          | /cats/11                  | cat id                                                                      |
+| get one dog          | /dogs/7                   | dog id                                                                      |
+| get random cat       | /cats/random              |                                                                             |
+| get random dog       | /dogs/random              |                                                                             |
+| search cats          | /cats/search?query=smudge | cat name                                                                    |
+| search dogs          | /dogs/search?query=lilly  | dog name                                                                    |
+| search dogs by breed | /dogs/breed?query=Terrier | breed name (case sensitive)                                                 |
+| search cats by breed | /cats/breed?query=Khao    | breed name (case sensitive)                                                 |
+| POST requests        |                           |                                                                             |
+| post a cat           | /cats                     | name (string), age (integer), is_available (boolean set to true by default) |
+| post a dog           | /dogs                     | name (string), age (integer), is_available (boolean set to true by default) |
+| PATCH requests       |                           |                                                                             |
+| update a cat         | /cats/11                  | name (string), age (integer), is_available (boolean set to true by default) |
+| update a dog         | /dogs/7                   | name (string), age (integer), is_available (boolean set to true by default) |
+| DELETE requests      |                           |                                                                             |
+| delete a cat         | /cats/11                  | cat id                                                                      |
+| delete a dog         | /dogs/7                   | dog id                                                                      |
 
 
 ## User Stories
