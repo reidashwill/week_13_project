@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_06_12_151431) do
+ActiveRecord::Schema.define(version: 2020_06_12_213825) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -19,12 +19,14 @@ ActiveRecord::Schema.define(version: 2020_06_12_151431) do
     t.string "name"
     t.integer "age"
     t.boolean "is_available", default: true
+    t.string "breed"
   end
 
   create_table "dogs", force: :cascade do |t|
     t.string "name"
     t.integer "age"
     t.boolean "is_available", default: true
+    t.string "breed"
   end
 
 end
