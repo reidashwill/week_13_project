@@ -1,7 +1,8 @@
 class DogsController < ApplicationController
 
   def index
-    @dogs = Dog.all
+    @dogs = Dog.all.page params[:page]
+    @page = params[:page]
     json_response(@dogs)
   end
 
