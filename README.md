@@ -52,13 +52,13 @@ As an admin i would like to be able to delete animals.
 
 
 ## Setup/Installation Requirements
-* _requires:_
+* _Requires:_
 
 * _Ruby (v 5.2.0)_
 * _Rails_
 * _Postgres_
-
-
+<br>  
+<br>  
 * _Navigate to https://github.com/reidashwill/week_13_project_
 * _clone the respository to your local machine_
 * _navigate to the cloned directory and open in your text editor of choice to view code_
