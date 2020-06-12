@@ -19,6 +19,20 @@ describe 'get random dog route' do
   first = Dog.first.id
   last = first + Dog.count
   it 'returns a random dog' do
-    expect(JSON.parse(response.body)['id']).to be_between(first, last)
+    expect(JSON.parse(response.body)['id']).to be_between(first, last-1)
+  end
+end
+
+describe 'dog search route' do
+  before {get '/dogs/search?query=lilly'}
+  it 'returns dogs with the name lilly' do
+    expect(response).to have_http_status(:success)
+  end
+end
+
+describe 'dog breed search route' do
+  before {get '/dogs/breed?query=Terrier'}
+  it 'returns dogs that are the breed Khao' do
+    expect(response).to have_http_status(:success)
   end
 end

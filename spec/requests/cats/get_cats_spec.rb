@@ -15,7 +15,9 @@ end
 describe 'get random cat route' do
   before{get '/cats/random'}
   it 'returns a random cat' do
-    expect(JSON.parse(response.body)['id']).to be_between(182, 196)
+  first = Cat.first.id
+  last = first + Cat.count
+    expect(JSON.parse(response.body)['id']).to be_between(first, last-1)
   end
 end
 
