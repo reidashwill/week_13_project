@@ -1,5 +1,5 @@
-Cats.destroy_all
-Dogs.destroy_all
+# Cats.destroy_all
+# Dogs.destroy_all
 
 class Seed
 
@@ -29,4 +29,4 @@ class Seed
 end
 
 Seed.begin
-p "SUCCESSFULLY SEEDED DB WITH #{Cats.count} CATS AND #{Dogs.count} DOGS"
+p "SUCCESSFULLY SEEDED DB WITH #{Cat.count} CATS AND #{Dog.count} DOGS"
