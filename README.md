@@ -69,7 +69,7 @@ As an admin i would like to be able to delete animals.
 
 
 
-* _Similarly, make calls to any endpoint described in the specs table to the live deployment of the API here: https://secure-brook-62642.herokuapp.com/[your_endpoint_here]_
+* _Similarly, make calls to any endpoint described in the specs table to the live deployment of the API here: https://reidsapi.herokuapp.com/[your_endpoint_here]_
 
 
 
