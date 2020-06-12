@@ -50,12 +50,28 @@ As an admin i would like to be able to delete animals.
 
 
 ## Setup/Installation Requirements
+* _requires:_
+
+* _Ruby (v 5.2.0)_
+* _Rails_
+* _Postgres_
+
 
 * _Navigate to https://github.com/reidashwill/week_13_project_
 * _clone the respository to your local machine_
 * _navigate to the cloned directory and open in your text editor of choice to view code_
 
-* _navigate to https://secure-brook-62642.herokuapp.com/[your_endpoint_here] to see the api live
+* _from the terminal inside the cloned project directory, run the command bundle install to bundle and install all required gems._
+* _run the commands rake db:create, followed by rake db:migrate to configure the database on your machine_
+* _run the command rspec to run the included suite of tests_
+* _run the command rails s to start a local server_
+* _make calls to any of the endpoints described in the specs table either in the browser of your choice, or in postman_
+
+
+
+* _Similarly, make calls to any endpoint described in the specs table to the live deployment of the API here: https://secure-brook-62642.herokuapp.com/[your_endpoint_here]_
+
+
 
 ## Known Bugs
 No known bugs at this time
