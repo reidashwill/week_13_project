@@ -50,7 +50,7 @@ class CatsController < ApplicationController
   private
 
   def cat_params
-    params.permit(:name, :age, :is_available)
+    params.permit(:name, :age, :breed, :is_available)
   end
 
 end
