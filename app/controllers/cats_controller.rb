@@ -41,6 +41,11 @@ class CatsController < ApplicationController
     json_response(@cat)
   end
 
+  def search
+    @cats = Cat.search_by_term(params[:query])
+    json_response(@cats)
+  end
+
   private
 
   def cat_params
