@@ -13,7 +13,9 @@ describe 'get all dogs route' do
 end
 
 describe 'get random dog route' do
+  
   before{get '/dogs/random'}
+  
   first = Dog.first.id
   last = first + Dog.count
   it 'returns a random dog' do
