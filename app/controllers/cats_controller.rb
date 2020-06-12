@@ -1,7 +1,8 @@
 class CatsController < ApplicationController
 
   def index
-    @cats = Cat.all
+    @cats = Cat.all.page params[:page]
+    @page = params[:page]
     json_response(@cats)
   end
 
