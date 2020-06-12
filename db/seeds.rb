@@ -1,7 +1,6 @@
 Cats.destroy_all
 Dogs.destroy_all
-Seed.begin
-p "SUCCESSFULLY SEEDED DB WITH #{Cats.count} CATS AND #{Dogs.count} DOGS"
+
 class Seed
 
   def self.begin
@@ -12,9 +11,8 @@ class Seed
   def self.generate_cats
     15.times do |i|
       cat = Cat.create!(
-        name: Faker::Creature::Cat.name
-        age: rand(1..9)
-        is_available: true
+        name: Faker::Creature::Cat.name,
+        age: rand(1..9),
       )
     end
   end
@@ -22,11 +20,13 @@ class Seed
   def self.generate_dogs
     15.times do |i|
       dog = Dog.create!(
-        name: Faker::Creature::Dog.name
-        age: rand(1..15)
-        is_available: true
+        name: Faker::Creature::Dog.name,
+        age: rand(1..15),
       )
     end
   end
 
 end
+
+Seed.begin
+p "SUCCESSFULLY SEEDED DB WITH #{Cats.count} CATS AND #{Dogs.count} DOGS"
