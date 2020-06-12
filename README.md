@@ -55,7 +55,7 @@ As an admin i would like to be able to delete animals.
 * _clone the respository to your local machine_
 * _navigate to the cloned directory and open in your text editor of choice to view code_
 
-<!-- * _navigate to    to see the api live -->
+* _navigate to https://secure-brook-62642.herokuapp.com/[your_endpoint_here] to see the api live
 
 ## Known Bugs
 No known bugs at this time
