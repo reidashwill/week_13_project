@@ -1,6 +1,6 @@
 class Cat < ApplicationRecord
-  include PgSearch
-  pg_search_scope :search_by_term, against: [:name],
+  include PgSearch::Model
+  pg_search_scope :search_cats, against: [:name],
   using: {
     tsearch:{
       any_word: true,

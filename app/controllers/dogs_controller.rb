@@ -32,7 +32,7 @@ class DogsController < ApplicationController
       }
     end
   end
-
+  
   def random
     first = Dog.first.id
     last = first + Dog.count

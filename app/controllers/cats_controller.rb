@@ -42,7 +42,7 @@ class CatsController < ApplicationController
   end
 
   def search
-    @cats = Cat.search_by_term(params[:query])
+    @cats = Cat.search_cats(params[:query])
     json_response(@cats)
   end
 
