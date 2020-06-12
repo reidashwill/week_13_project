@@ -41,6 +41,11 @@ class DogsController < ApplicationController
     json_response(@dog)
   end
 
+  def search
+    @dogs = Dog.search_dogs(params[:query])
+    json_response(@dogs)
+  end
+
   private
 
   def dog_params
