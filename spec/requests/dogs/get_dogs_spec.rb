@@ -4,7 +4,7 @@ describe 'get all dogs route' do
   before {get '/dogs'}
 
   it 'returns all dogs' do
-    expect(JSON.parse(response.body).size).to eq(15)
+    expect(JSON.parse(response.body).size).to eq(5)
   end
 
   it 'returns status code 200' do
