@@ -33,6 +33,12 @@ class CatsController < ApplicationController
     end
   end
 
+  def random
+    @first = Cat.first.id
+    @last = @first + Cat.count
+    @cat = Cat.find(rand(@frist...@last))
+  end
+
   private
 
   def cat_params
