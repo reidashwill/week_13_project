@@ -1,7 +1,7 @@
 class Cat < ApplicationRecord
   include PgSearch::Model
 
-  validates :name, :age, presence: true
+  validates :name, :age, :breed, presence: true
 
   paginates_per 5
 
