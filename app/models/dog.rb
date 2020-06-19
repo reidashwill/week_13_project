@@ -1,7 +1,7 @@
 class Dog < ApplicationRecord
   include PgSearch::Model
 
-  validates :name, :age, :breed, presence: true
+  validates :name, :age, :breed, :is_available, presence: true
 
   paginates_per 5 
 
