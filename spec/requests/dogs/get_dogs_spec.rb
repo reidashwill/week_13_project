@@ -1,38 +1,39 @@
 require 'rails_helper'
 
-describe 'get all dogs route' do
-  before {get '/dogs'}
+describe 'all get dogs routes' do
+  before(:all) {Dog.destroy_all}
+  before(:all) { 5.times do
+    Dog.create!(
+    name: Faker::Creature::Dog.name,
+    age: rand(1..9),
+    breed: Faker::Creature::Dog.breed
+  ) 
+  end}
 
   it 'returns all dogs' do
+    get '/dogs'
     expect(JSON.parse(response.body).size).to eq(5)
   end
 
   it 'returns status code 200' do
+    get '/dogs'
     expect(response).to have_http_status(:success)
   end
-end
-
-describe 'get random dog route' do
   
-  before{get '/dogs/random'}
-  
-  first = Dog.first.id
-  last = first + Dog.count
   it 'returns a random dog' do
+    get '/dogs/random'
+    first = Dog.first.id
+    last = first + Dog.count
     expect(JSON.parse(response.body)['id']).to be_between(first, last-1)
   end
-end
 
-describe 'dog search route' do
-  before {get '/dogs/search?query=lilly'}
   it 'returns dogs with the name lilly' do
+    get '/dogs/search?query=lilly'
     expect(response).to have_http_status(:success)
   end
-end
 
-describe 'dog breed search route' do
-  before {get '/dogs/breed?query=Terrier'}
   it 'returns dogs that are the breed Khao' do
+    get '/dogs/breed?query=Terrier'
     expect(response).to have_http_status(:success)
   end
 end
